@@ -1,50 +1,3 @@
-                //скрипты на js
-// var navMain = document.querySelector('.top-menu__nav');
-// var navToggle = document.querySelector('.top-menu__toggle');
-//
-// navMain.classList.remove('top-menu--nojs');
-//
-// navToggle.addEventListener('click', function() {
-//   if (navMain.classList.contains('top-menu--closed')) {
-//     navMain.classList.remove('top-menu--closed');
-//     navMain.classList.add('top-menu--opened');
-//   } else {
-//     navMain.classList.add('top-menu--closed');
-//     navMain.classList.remove('top-menu--opened');
-//   }
-// });
-//
-// var navMain2 = document.querySelector('.sub-menu__nav');
-// var navToggle2 = document.querySelector('.sub-menu__toggle');
-//
-// navMain2.classList.remove('sub-menu--nojs');
-//
-// navToggle2.addEventListener('click', function() {
-//   if (navMain2.classList.contains('sub-menu--closed')) {
-//     navMain2.classList.remove('sub-menu--closed');
-//     navMain2.classList.add('sub-menu--opened');
-//   } else {
-//     navMain2.classList.add('sub-menu--closed');
-//     navMain2.classList.remove('sub-menu--opened');
-//   }
-// });
-//
-//
-// var link = document.querySelector(".goods-week__link, .catalog__icon");
-// var popup = document.querySelector(".modal");
-// // var close = popup.querySelector(".modal::after");
-// link.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   popup.classList.add("modal-show");
-// });
-//
-// close.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-//     popup.classList.remove("modal-show");
-// });
-
-
-
 $(function(){
     $('.where__button').on('click', function() {
        $('.modal').slideToggle(300, function(){
@@ -63,15 +16,13 @@ $(function(){
                 $(this).addClass('top-menu--closed');
                 $(this).removeClass('top-menu--opened');
                 $(this).removeAttr('style');
-                $(".top-menu__lists").fadeOut();
-                $('.top-menu__items').fadeOut();
+                $('.top-menu__lists, .top-menu__items').hide();
             }
             else {
               $(this).addClass('top-menu--opened');
               $(this).removeClass('top-menu--closed');
               $(this).removeAttr('style');
-              $('.top-menu__lists').fadeIn();
-              $('.top-menu__items').fadeIn();
+              $('.top-menu__lists, .top-menu__items').show();
             }
        });
     });
@@ -84,7 +35,7 @@ $(function(){
                 $(this).removeClass('sub-menu--closed');
                 $(this).addClass('sub-menu--opened');
                 $(this).removeAttr('style');
-                $(".sub-menu__lists").fadeIn();
+                $(".sub-menu__lists").show();
             }
             else {
               $(this).removeClass('sub-menu--opened');
@@ -94,3 +45,41 @@ $(function(){
        });
     });
 });
+
+
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+
+    //smoothscroll
+    $('.sub-menu a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a').each(function () {
+            $(this).removeClass('sub-menu__item--active');
+        })
+        $(this).addClass('sub-menu__item--active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top-100
+        }, 500, 'linear', function () {
+            window.location.hash = target-100;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.sub-menu a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top-100 <= scrollPos && refElement.position().top-100 + refElement.height() > scrollPos) {
+            $('.sub-menu ul li a').removeClass("sub-menu__item--active");
+            currLink.addClass("sub-menu__item--active");
+        }
+    });
+}
