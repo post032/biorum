@@ -243,6 +243,12 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 @font-face {
+  font-family: "open sans regular";
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
   font-family: "open sans";
   src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
   font-style: normal;
@@ -1676,14 +1682,14 @@ input[type="radio"].visually-hidden {
   height: 100%;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   left: 50%;
 }
 .modal__form {
   position: absolute;
-  z-index: 105;
+  z-index: 1005;
   top: 56px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1706,10 +1712,10 @@ input[type="radio"].visually-hidden {
 .modal__text {
   font-size: 16px;
   line-height: 18px;
-  font-weight: normal;
   margin-top: 25px;
   word-spacing: 4px;
   margin-bottom: 23px;
+  font-weight: normal;
 }
 .modal__text2 {
   font-size: 14px;
