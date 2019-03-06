@@ -1,0 +1,132 @@
+.modal {
+  box-sizing: border-box;
+  display: none;
+}
+
+.modal__title {
+  display: none;
+}
+
+.modal::after {
+  content: "";
+  background: rgba(0,0,0,0);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.modal__form {
+  position: absolute;
+  z-index: 105;
+  top: 56px;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: #ffffff;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  height: 100%;
+  width: 100%
+}
+
+.modal__active {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-size {
+  width: 285px;
+}
+
+.modal__text {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  margin-top: 25px;
+  word-spacing: 4px;
+  margin-bottom: 23px;
+}
+
+.modal__text2 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.modal__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: url("../img/select.svg") no-repeat 260px center;
+  outline: 0;
+  width: 288px;
+  height: 36px;
+  border-radius: 0;
+  padding-left: 10px;
+}
+
+.modal__option {
+  font-size: 14px;
+  line-height: 13px;
+}
+
+.modal__button {
+  color: #ffffff;
+  font-size: 14px;
+  background-color: rgba(0, 170, 250, 0.3);
+  width: 138px;
+  height: 36px;
+  border: none;
+  margin-top: 30px;
+  transform: translateX(50%);
+  margin-left: 2px;
+}
+
+@media (min-width: @size-tablet) {
+  .modal__form {
+    width: 410px;
+    height: 312px;
+    top: 180px;
+  }
+
+  .modal::after {
+    content: "";
+    background: rgba(0,0,0,0.5);
+  }
+
+  .modal__title {
+    display: block;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: @fonts-menu;
+    margin-top: 35px;
+  }
+
+  .modal__select {
+    width: 330px;
+    height: 36px;
+  }
+
+  .modal__text {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 22px;
+    margin-bottom: 17px;
+  }
+
+  .modal-size {
+    width: 330px;
+  }
+
+  .modal__select {
+    background-position: 300px center;
+  }
+  .modal__button {
+    transform: translateX(138%);
+  }
+}

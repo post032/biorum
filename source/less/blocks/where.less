@@ -1,0 +1,226 @@
+.where {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.where__title {
+  width: 90%;
+  margin-top: 45px;
+  margin-bottom: 8px;
+  .title-m;
+}
+
+.where__title-two {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.where__text--border {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e1e4e6;
+}
+
+.where__text2 {
+  width: 85%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 40px;
+  margin-bottom: 11px;
+}
+
+.where__text2--position {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.where__description {
+  width: 90%;
+  margin-bottom: 2px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.where__text {
+  width: 90%;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  word-spacing: 3px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.where__items,
+.where__lists {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.where__lists {
+  margin-top: 33px;
+}
+
+.where__items {
+  margin-top: 22px;
+}
+
+.where__item,
+.where__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.where__marker1,
+.where__marker2,
+.where__marker5 {
+  background: url("../img/marker_sprites.png") no-repeat;
+  width: 119px;
+  height: 59px;
+}
+
+.where__marker1 {
+  background-position: -10px -10px;
+}
+
+.where__marker2 {
+  background-position: -149px -10px;
+}
+
+.where__marker5 {
+  background-position: -10px -89px;
+}
+
+.where__text--color {
+  color: #00aaff;
+}
+
+.where__title-three {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: @fonts-menu;
+  margin-top: 17px;
+  margin-bottom: 0;
+}
+
+.where__mark {
+  font-size: 12px;
+  line-height: 20px;
+  color: #87919b;
+  margin-top: 2px;
+  margin-bottom: 33px;
+}
+
+.where__mark--size {
+  margin-bottom: 12px;
+}
+
+.where__button {
+  width: 172px;
+  height: 36px;
+  font-weight: bold;
+  margin-bottom: 55px;
+  .button-m;
+}
+
+.where__button:hover {
+  background-color: #46c3ff;
+  color: #ffffff;
+}
+
+.where__button:focus {
+  background-color: #0096e1;
+  color: #055f8c;
+}
+
+.where__button:active {
+  opacity: 0.3;
+}
+
+@media (min-width: @size-tablet) {
+  .where__title {
+    .title-t
+  }
+
+  .where__title-two {
+    font-size: 26px;
+    line-height: 50px;
+    font-weight: bold;
+  }
+
+  .where__description {
+    margin-top: 4px;
+    margin-bottom: 17px;
+    .description-d;
+  }
+
+  .where__text--border {
+    padding-bottom: 71px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .where__text,
+  .where__text2 {
+    width: 81%;
+    margin-bottom: 19px;
+    line-height: 30px;
+    .text-d;
+  }
+
+  .where__text2 {
+    margin-top: 52px;
+    margin-bottom: 10px;
+    word-spacing: 3px;
+  }
+
+  .where__items,
+  .where__lists {
+    margin-top: 19px;
+    display: grid;
+    grid-gap: 7px;
+  }
+  .where__lists{
+    grid-template-columns: repeat(6,1fr);
+  }
+
+  .where__items {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .where__mark {
+    margin-bottom: 13px;
+  }
+
+  .where__text2--position {
+    margin-top: 33px;
+    margin-bottom: 31px;
+  }
+
+  .where__button {
+    width: 195px;
+    height: 40px;
+    margin-bottom: 100px;
+    .button-d
+  }
+}
+@media (min-width: @size-desktop) {
+  .where__title {
+    margin-top: 97px;
+    .title-d;
+  }
+
+  .where__items,
+  .where__lists {
+    grid-gap: 81px;
+  }
+}

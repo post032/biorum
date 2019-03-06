@@ -1,0 +1,88 @@
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: "open sans", "Arial", sans-serif;
+  color: @text-color;
+  font-style: normal;
+  background-color: @basic-color;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  min-width: 320px;
+  position: relative;
+}
+
+@media (min-width: @size-tablet) {
+  .container {
+    padding: 0;
+    margin: 0 auto;
+    min-width: 768px;
+    position: relative;
+  }
+}
+
+
+@media (min-width: @size-desktop) {
+  .container {
+    padding: 0;
+    margin: 0 auto;
+    width: 1170px;
+    position: relative;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "open sans";
+  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "open sans";
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-style: bold;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "open sans semibold";
+  src: url("../fonts/opensanssemibold.woff2") format("woff2"), url("../fonts/opensanssemibold.woff") format("woff");
+  font-style: bold;
+  font-weight: bold;
+}

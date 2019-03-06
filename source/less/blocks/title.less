@@ -1,0 +1,54 @@
+.title {
+  background: url("../img/background-m@1x.jpg") no-repeat;
+  background-size: auto;
+  background-position: 66% 34%;
+  overflow: hidden;
+}
+
+.title__position {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.title__name {
+  margin: 0;
+  font-size: 58px;
+  line-height: 75px;
+  color: #ffffff;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.title__tablet {
+  display: none;
+}
+
+.title__family {
+  font-family: @fonts-menu;
+}
+
+
+
+
+@media (min-width: 890px) {
+  .title {
+    background-color:  @bg-color-hf;
+    background: url("../img/background-d@1x.jpg") no-repeat;
+    background-size: cover;
+    background-position: center 56%;
+  }
+  .title__name {
+    font-size: 91px;
+    margin: 0 0 13px;
+  }
+  .title__tablet {
+    display: inline;
+  }
+
+  .title__position {
+    justify-content: flex-start;
+  }
+}

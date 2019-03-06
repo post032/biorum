@@ -1,0 +1,107 @@
+.food {
+  box-sizing: border-box;
+  position: relative;
+  background-color: @bg-color-grey;
+}
+
+.food__position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.food__title,
+.food__text,
+.food__mark {
+  width: 90%;
+  font-size: 18px;
+}
+
+.food__title {
+  text-transform: uppercase;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+.food__text {
+  margin-top: 23px;
+  line-height: 21px;
+}
+
+.food__mark {
+  line-height: 24px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.food__img {
+  width: 320px;
+  height: 440px;
+  background: url("../img/dish-m@1x.jpg") no-repeat 1px -251px;
+}
+
+@media (min-width: @size-tablet) {
+  .food__title {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  .food__text {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .food__mark {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .food__img {
+    width: 750px;
+    height: 338px;
+    background: url("../img/dish-d1x.jpg") no-repeat -11px -65px;
+    margin-left: 63px;
+    margin-top: 3px;
+    overflow: hidden;
+}
+
+}
+@media (min-width: @size-desktop) {
+  .food__img {
+    width: 1100px;
+    height: 538px;
+    background: url("../img/dish-d1x.jpg") no-repeat;
+    margin-left: 63px;
+    margin-top: 3px;
+}
+
+.food__title,
+.food__text,
+.food__mark {
+  width: 32%;
+  text-align: left;
+  position: absolute;
+  word-spacing: 3px;
+}
+
+.food__title{
+  top: 383px;
+  right: 0;
+}
+
+.food__text {
+  top: 93px;
+  right: 0;
+
+}
+
+.food__mark {
+  top: 413px;
+  right: 0;
+}
+
+}

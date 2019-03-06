@@ -1,0 +1,30 @@
+.user-list {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.user-list__login {
+  font-size: 14px;
+  font-family: @fonts-menu;
+  color: @text-menu-color;
+}
+
+.user-list__item {
+  display: grid;
+  min-height: 56px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+@media (min-width: @size-tablet) {
+  .user-list__item {
+    min-height: 69px;
+  }
+}
+
+@media (min-width: @size-desktop) {
+  .user-list__item {
+    justify-content: flex-end;
+  }
+}
